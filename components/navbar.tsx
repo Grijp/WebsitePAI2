@@ -10,13 +10,11 @@ export default function Navbar() {
     <>
       <nav className="container mx-auto px-4 lg:px-12 py-6">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <img src="/logo.svg" alt="PrinciplesAI Logo" className="h-8 w-auto" />
             <span className="text-white font-bold text-xl">PrinciplesAI</span>
           </a>
           
-          {/* Navigation Links & Button */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="/" className="text-gray-300 hover:text-white transition-colors">
               Home
@@ -35,18 +33,16 @@ export default function Navbar() {
             </button>
           </div>
         
-        {/* Mobile Button */}
-        <button 
-          onClick={() => setIsModalOpen(true)}
-          className="md:hidden bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors shadow-lg shadow-blue-600/30"
-        >
-          Start de Shift
-        </button>
-      </div>
-    </nav>
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="md:hidden bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors shadow-lg shadow-blue-600/30"
+          >
+            Start de Shift
+          </button>
+        </div>
+      </nav>
     
-    {/* Email Modal */}
-    <EmailModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <EmailModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 }

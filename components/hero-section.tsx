@@ -6,16 +6,12 @@ export default function HeroSection() {
   return (
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl">
-        {/* Titel boven de split-screen */}
         <h1 className="text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white mb-12 lg:mb-16 leading-tight">
           Voor kenniswerkers bij wie aandacht het nieuwe schaarsste 'kapitaal' is
         </h1>
         
         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[400px]">
-          
-          {/* Linker Vlak - Het Probleem (Donkere 'glas' look) */}
           <div className="bg-emerald-900/40 border border-emerald-800/50 rounded-2xl lg:rounded-r-none lg:rounded-l-2xl p-8 lg:pl-4 lg:pr-48 relative overflow-visible z-20">
-            {/* Subtle glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-transparent pointer-events-none"></div>
             
             <div className="relative z-30">
@@ -28,9 +24,7 @@ export default function HeroSection() {
             </div>
           </div>
           
-          {/* Rechter Vlak - De Oplossing (Blauwe 'glow' look) */}
           <div className="bg-blue-950/60 border border-blue-800/50 rounded-2xl lg:rounded-l-none lg:rounded-r-2xl p-8 lg:pl-48 lg:pr-4 relative overflow-visible z-20">
-            {/* Glow effect */}
             <div className="absolute inset-0 bg-gradient-to-bl from-blue-600/20 to-transparent pointer-events-none"></div>
             <div className="absolute inset-0 bg-blue-600/10 blur-xl pointer-events-none"></div>
             
@@ -42,7 +36,6 @@ export default function HeroSection() {
                 Je zoekt geen nieuwe tool, maar een nieuwe manier van werken.
               </p>
               
-              {/* Lijst - De Cura-Methode */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-start space-x-3">
                   <span className="text-blue-500 font-bold mt-1">1.</span>
@@ -58,14 +51,12 @@ export default function HeroSection() {
                 </div>
               </div>
               
-              {/* Payoff */}
               <p className="text-white font-semibold text-lg">
                 Minder rennen, meer regie. Zo gaat werk wél uit handen.
               </p>
             </div>
           </div>
           
-          {/* Centraal Element - Logo (absoluut gepositioneerd op de scheidslijn tussen de vlakken, achter tekst maar voor achtergrond) */}
           <div className="hidden lg:flex items-center justify-center absolute left-1/2 top-0 bottom-0 -translate-x-1/2 z-10 pointer-events-none">
             <img 
               src="/logo.svg" 

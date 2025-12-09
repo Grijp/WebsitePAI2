@@ -6,7 +6,6 @@ export default function MethodeFlowchart() {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
-        {/* Toegangsprijs */}
         <div className="text-center mb-12">
           <div className="inline-block bg-slate-900 border-2 border-blue-600 rounded-lg px-8 py-4">
             <p className="text-2xl lg:text-3xl font-bold text-white">
@@ -15,15 +14,11 @@ export default function MethodeFlowchart() {
           </div>
         </div>
 
-        {/* Flowchart Container */}
         <div className="relative border-4 border-blue-600 rounded-2xl p-8 lg:p-12 bg-slate-900/50">
-          {/* Decoratieve elementen in hoeken */}
           <div className="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-blue-600"></div>
           <div className="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-blue-600"></div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative">
-            
-            {/* Fase 1: Workshop */}
             <div className="bg-blue-950/60 border-2 border-blue-600 rounded-xl p-6 lg:p-8 relative z-10">
               <h3 className="text-2xl font-bold text-white mb-4">Fase 1: Workshop</h3>
               
@@ -50,7 +45,6 @@ export default function MethodeFlowchart() {
               
             </div>
 
-            {/* Fase 2: Coaching */}
             <div className="bg-emerald-900/40 border-2 border-emerald-600 rounded-xl p-6 lg:p-8 relative z-10">
               <h3 className="text-2xl font-bold text-white mb-4">Fase 2: Coaching</h3>
               
@@ -77,7 +71,6 @@ export default function MethodeFlowchart() {
               
             </div>
 
-            {/* Fase 3: Gezamenlijke terugblik */}
             <div className="lg:col-span-2 bg-indigo-900/40 border-2 border-indigo-600 rounded-xl p-6 lg:p-8 relative z-10 mt-8 lg:mt-0">
               <h3 className="text-2xl font-bold text-white mb-4">Fase 3: Gezamenlijke terugblik</h3>
               

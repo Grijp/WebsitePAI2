@@ -12,7 +12,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Controleer of API key is ingesteld
     if (!process.env.RESEND_API_KEY) {
       console.error('RESEND_API_KEY is niet ingesteld in .env.local');
       return NextResponse.json(
@@ -24,25 +23,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Maak Resend instantie aan met API key
     const resend = new Resend(process.env.RESEND_API_KEY);
-
-    // Verstuur email volgens Resend documentatie
     const recipientEmail = process.env.RECIPIENT_EMAIL || 'mathijs@principlesai.nl';
     
     if (!recipientEmail.includes('@') || !recipientEmail.includes('.')) {
       return NextResponse.json(
         { 
           error: 'Ongeldig ontvanger email adres',
-          message: 'RECIPIENT_EMAIL moet een geldig email adres zijn (bijv. mathijs@principlesai.com)'
+          message: 'RECIPIENT_EMAIL moet een geldig email adres zijn'
         },
         { status: 500 }
       );
     }
     
     const { data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>', // Gebruik Resend test domein voor development
-      to: recipientEmail, // Kan string of array zijn
+      from: 'Acme <onboarding@resend.dev>',
+      to: recipientEmail,
       subject: 'Nieuwe email signup - PrinciplesAI',
       html: `
         <h2>Nieuwe email signup</h2>
