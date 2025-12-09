@@ -21,11 +21,15 @@ export default function EmailSignup() {
         body: JSON.stringify({ email }),
       });
 
+      const data = await response.json();
+      
       if (response.ok) {
         setMessage('Bedankt! We nemen zo snel mogelijk contact met je op.');
         setEmail('');
       } else {
-        setMessage('Er ging iets mis. Probeer het later opnieuw.');
+        // Toon specifieke error message als beschikbaar
+        setMessage(data.details || data.error || 'Er ging iets mis. Probeer het later opnieuw.');
+        console.error('API Error:', data);
       }
     } catch (error) {
       setMessage('Er ging iets mis. Probeer het later opnieuw.');
